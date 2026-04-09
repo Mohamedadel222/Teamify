@@ -136,6 +136,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       controller: emailController,
                       hint: "example562@gmail.com",
                       prefixIcon: Icons.mail_outline,
+                      validator: (v) {
+                        if (v == null || v.trim().isEmpty) return 'Email is required';
+                        if (!v.contains('@')) return 'Enter a valid email';
+                        return null;
+                      },
                     ),
                     const SizedBox(height: 24),
 
@@ -149,6 +154,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       onToggleVisibility: () => setState(
                         () => _isPasswordObscured = !_isPasswordObscured,
                       ),
+                      validator: (v) {
+                        if (v == null || v.isEmpty) return 'Password is required';
+                        return null;
+                      },
                     ),
                     const SizedBox(height: 12),
 
@@ -365,10 +374,12 @@ class _LoginScreenState extends State<LoginScreen> {
     bool isPassword = false,
     bool isObscured = false,
     VoidCallback? onToggleVisibility,
+    String? Function(String?)? validator,
   }) {
     return TextFormField(
       controller: controller,
       obscureText: isObscured,
+      validator: validator,
       style: TextStyle(color: primaryTextColor, fontWeight: FontWeight.w600),
       decoration: InputDecoration(
         hintText: hint,
