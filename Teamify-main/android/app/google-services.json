@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "45577152565",
+    "project_id": "teamify-acde9",
+    "storage_bucket": "teamify-acde9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45577152565:android:5035729b32d1416ae2297c",
+        "android_client_info": {
+          "package_name": "com.example.teamify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3a0kQKljnCsozoYZrvn6hTUA_PFMIZ9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
