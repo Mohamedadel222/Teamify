@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:teamify/features/auth/presentation/cubit/auth_guard_cubit.dart';
-import 'package:teamify/features/auth/presentation/cubit/login_cubit.dart';
 // import 'package:provider/provider.dart';
 // import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 // import 'package:teamify/features/auth/presentation/screens/choose_role_screen.dart';
@@ -31,9 +30,6 @@ void main() async {
         BlocProvider<AuthGuardCubit>(
           create: (_) => sl<AuthGuardCubit>()..checkAuth(),
         ),
-        BlocProvider<LoginCubit>(
-        create: (_) => sl<LoginCubit>(),
-      ),
       ],
       child: const MyApp(),
     ),
